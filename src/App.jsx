@@ -6,10 +6,10 @@ function App() {
  const [user, setUser] = useState()
 
   useEffect(() => {
+    const URL = 'https://thronesapi.com/api/v2/Characters'
+   axios.get(URL)
 
-   axios.get('https://randomuser.me/api/')
-
-     .then(res => setUser(res.data.results[0]) )
+     .then(res => setUser(res.data.results[0]) ) // El then es un metodo que te permite confirmar la llegada de la informacion la petion
      .catch()
 
   }, [])
